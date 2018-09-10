@@ -1,8 +1,4 @@
-import Link from 'next/link'
-import React from 'react';
-
-
-const  maat:any[] = [
+maat:any[] = [
   {"ID":"1067","name":"China","population":"1359821466","percentage":"19,66%","position":"1"},
   {"ID":"1068","name":"India","population":"1205624727","percentage":"17,43%","position":"2"},
   {"ID":"1069","name":"United States of America","population":"312237216","percentage":"4,51%","position":"3"},
@@ -34,37 +30,3 @@ const  maat:any[] = [
   {"ID":"1095","name":"Ukraine","population":"46044304","percentage":"0,67%","position":"29"},
   {"ID":"1096","name":"United Republic of Tanzania","population":"44973330","percentage":"0,65%","position":"30"}
 ];
-
-
-
-const Home: React.SFC<{prop1: string, prop2: number}> = () => {
-  const dateNow = new Date();
-  return (
-   <div>
-    <div>Hello World!</div>
-      <Link href="/about">
-      <a>About</a>
-    </Link>
-    <div>
-
-{`Tänään on ${dateNow.getDate()}.${dateNow.getMonth()+1}.${dateNow.getFullYear()}`}
-
-  </div>
-  <div>
-     {maat.map(maa => (
-       <div>
-      {`COUNTRY: ${maa.name}, POPULATION: ${maa.population},`}
-       </div>
-     ))}
-   </div>
-
-</div>
-  )
-}
-
-
-
-
-
-//array.map(item => <div>{item}</div>);
-export default Home;
