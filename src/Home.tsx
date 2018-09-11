@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react';
-
-
+import Clock from '../src/components/Clock'
+/*
 const  maat:any[] = [
   {"ID":"1067","name":"China","population":"1359821466","percentage":"19,66%","position":"1"},
   {"ID":"1068","name":"India","population":"1205624727","percentage":"17,43%","position":"2"},
@@ -34,8 +34,17 @@ const  maat:any[] = [
   {"ID":"1095","name":"Ukraine","population":"46044304","percentage":"0,67%","position":"29"},
   {"ID":"1096","name":"United Republic of Tanzania","population":"44973330","percentage":"0,65%","position":"30"}
 ];
+  <div>
+     {maat.map(maa => (
+       <div>
+      {`COUNTRY: ${maa.name}, POPULATION: ${maa.population},`}
+       </div>
+     ))}
+   </div>
 
 
+*/
+//const kello = clock();
 
 const Home: React.SFC<{prop1: string, prop2: number}> = () => {
   const dateNow = new Date();
@@ -45,26 +54,22 @@ const Home: React.SFC<{prop1: string, prop2: number}> = () => {
       <Link href="/about">
       <a>About</a>
     </Link>
+
     <div>
-
-{`Tänään on ${dateNow.getDate()}.${dateNow.getMonth()+1}.${dateNow.getFullYear()}`}
-
+        {`Tänään on ${dateNow.getDate()}.${dateNow.getMonth()+1}.${dateNow.getFullYear()}`}
   </div>
-  <div>
-     {maat.map(maa => (
-       <div>
-      {`COUNTRY: ${maa.name}, POPULATION: ${maa.population},`}
-       </div>
-     ))}
-   </div>
+<div>
 
+<Clock/><Clock/><Clock/><Clock/>
+<Clock/><Clock/><Clock/>
+<Clock/><Clock/><Clock/>
+
+
+
+</div>
 </div>
   )
 }
 
 
-
-
-
-//array.map(item => <div>{item}</div>);
 export default Home;
