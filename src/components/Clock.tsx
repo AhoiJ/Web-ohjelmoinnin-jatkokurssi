@@ -32,8 +32,7 @@ public render() {
   let dateNow = new Date();
   return (
     <div>
-      <button onClick={this.updateCounter}> Increase</button>
-      test clock, counter: {this.state.counter}
+      
       <br />
       {`Kello on ${dateNow.getHours()}.${dateNow.getMinutes()}.${dateNow.getSeconds()}`}
       <br />
