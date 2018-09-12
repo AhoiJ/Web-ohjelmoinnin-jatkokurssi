@@ -44,10 +44,10 @@ const  maat:any[] = [
 
 
 */
-//const kello = clock();
 
 const Home: React.SFC<{prop1: string, prop2: number}> = () => {
   const dateNow = new Date();
+  const array = [...Array(10)];
   return (
    <div>
     <div>Hello World!</div>
@@ -60,11 +60,9 @@ const Home: React.SFC<{prop1: string, prop2: number}> = () => {
   </div>
 <div>
 
-<Clock/><Clock/><Clock/><Clock/>
-<Clock/><Clock/><Clock/>
-<Clock/><Clock/><Clock/>
-
-
+{array.map((item, index) =>(
+   <Clock key={index}/>
+ ))}
 
 </div>
 </div>

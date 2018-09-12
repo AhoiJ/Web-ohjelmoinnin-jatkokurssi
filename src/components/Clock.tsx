@@ -1,16 +1,44 @@
 import Link from 'next/link'
 import React from 'react';
 
-class Clock extends React.Component{
-  render() {
-    return(
+interface IClockState{
+  counter: number;
+}
+
+
+
+class Clock extends React.Component <{}, {IClockState}>{
+private timerID = null;
+  constructor(props){
+    super(props)
+    this.state = {
+      counter: 0,
+    }
+  };
+  public componentDidMount() {
+this.timerID = window.setInterval(
+() => this.updateCounter(),
+1000,
+)
+  }
+  private updateCounter = () => {
+    this.setState({counter: this.state.counter + 1})
+  }
+  private componentWillUnmount(){
+    window.clearInterval(this.timerID);
+  }
+
+public render() {
+  let dateNow = new Date();
+  return (
     <div>
-      <h2>Kello on {new Date().toLocaleTimeString()}.</h2>
+      <button onClick={this.updateCounter}> Increase</button>
+      test clock, counter: {this.state.counter}
+      <br />
+      {`Kello on ${dateNow.getHours()}.${dateNow.getMinutes()}.${dateNow.getSeconds()}`}
+      <br />
     </div>
   )
-}
-componentDidMount(){
-setInterval (Date, 1000);
 }
 }
 
