@@ -11980,6 +11980,7 @@ var Home = function Home() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__material_ui_core_Paper__ = __webpack_require__("./node_modules/@material-ui/core/Paper/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__material_ui_core_Paper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Paper__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__countries__ = __webpack_require__("./src/countries.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Country__ = __webpack_require__("./src/components/Country.tsx");
 var _jsxFileName = "/home/jere/with-typescript-app/src/components/Countries.tsx";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -11995,6 +11996,7 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 
 
 
@@ -12022,80 +12024,61 @@ function (_React$Component) {
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_Paper___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18
+          lineNumber: 20
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 19
+          lineNumber: 21
         }
       }, "Countries"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__material_ui_core_Table___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 20
+          lineNumber: 22
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_TableHead___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21
+          lineNumber: 23
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__material_ui_core_TableRow___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 24
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__material_ui_core_TableCell___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 25
         }
       }, "Name"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__material_ui_core_TableCell___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 28
         }
       }, "Population"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__material_ui_core_TableCell___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 31
         }
       }, "Percentage"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__material_ui_core_TableCell___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 34
         }
       }, "Position"))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__material_ui_core_TableBody___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 39
         }
       }, __WEBPACK_IMPORTED_MODULE_7__countries__["a" /* default */].map(function (country) {
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__material_ui_core_TableRow___default.a, {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 39
-          }
-        }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__material_ui_core_TableCell___default.a, {
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__Country__["a" /* default */], {
+          prop1: country,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 40
           }
-        }, country.name), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__material_ui_core_TableCell___default.a, {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 43
-          }
-        }, country.population), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__material_ui_core_TableCell___default.a, {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 46
-          }
-        }, country.percentage), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__material_ui_core_TableCell___default.a, {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 49
-          }
-        }, country.position));
+        });
       }))));
     }
   }]);
@@ -12104,6 +12087,56 @@ function (_React$Component) {
 }(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["a"] = (Countries);
+
+/***/ }),
+
+/***/ "./src/components/Country.tsx":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__material_ui_core_TableRow__ = __webpack_require__("./node_modules/@material-ui/core/TableRow/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__material_ui_core_TableRow___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__material_ui_core_TableRow__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__material_ui_core_TableCell__ = __webpack_require__("./node_modules/@material-ui/core/TableCell/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__material_ui_core_TableCell___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__material_ui_core_TableCell__);
+var _jsxFileName = "/home/jere/with-typescript-app/src/components/Country.tsx";
+
+
+
+
+var Country = function Country(_ref) {
+  var _ref$prop = _ref.prop1,
+      prop1 = _ref$prop === void 0 ? {} : _ref$prop;
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__material_ui_core_TableRow___default.a, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    }
+  }, console.log('DEBUG: ', prop1), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__material_ui_core_TableCell___default.a, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    }
+  }, prop1.name), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__material_ui_core_TableCell___default.a, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    }
+  }, prop1.population), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__material_ui_core_TableCell___default.a, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    }
+  }, prop1.percentage), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__material_ui_core_TableCell___default.a, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    }
+  }, prop1.position));
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (Country);
 
 /***/ }),
 
