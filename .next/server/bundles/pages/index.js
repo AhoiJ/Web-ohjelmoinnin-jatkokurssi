@@ -96,106 +96,94 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__material_ui_core_Button___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__material_ui_core_Button__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__material_ui_core_Grid__ = __webpack_require__("@material-ui/core/Grid");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__material_ui_core_Grid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_Grid__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__material_ui_core_AppBar__ = __webpack_require__("@material-ui/core/AppBar");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__material_ui_core_AppBar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__material_ui_core_AppBar__);
 var _jsxFileName = "/home/jere/with-typescript-app/src/Home.tsx";
 
 
 
 
 
-/* Tehtävät React 2a asti
-const Home: React.SFC<{prop1: string, prop2: number}> = () => {
-  const dateNow = new Date();
-  const array = [...Array(10)];
 
-  return (
-   <div>
-    <div>Hello World!</div>
-      <Link href="/about">
-      <a>About</a>
-    </Link>
-
-    <div>
-      <Button color="primary">Material UI Test Button</Button>
-        {`Tänään on ${dateNow.getDate()}.${dateNow.getMonth()+1}.${dateNow.getFullYear()}`}
-  </div>
-
-<div>
-{array.map((item, index) =>(
-   <Clock key={index}/>
- ))}
-</div>
-
-
-</div>
-  )
-}
-*/
 
 var Home = function Home() {
   return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 18
     }
-  }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("div", {
+  }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__material_ui_core_AppBar___default.a, {
+    style: {
+      backgroudColor: muiTheme.palette.primary1Color,
+      flexWrap: 'wrap'
+    },
+    showMenuIconButton: true,
+    title: __WEBPACK_IMPORTED_MODULE_5__material_ui_core_AppBar___default.a,
+    titleStyle: muiTheme.title,
+    iconClassNameRight: "muidocs-icon-navigation-expand-more",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 19
+    }
+  }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
     }
   }, "Hello worlds!!"), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 28
     }
   }, "p", __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_0_next_link___default.a, {
     href: "/about",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 29
     }
   }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 30
     }
   }, "About"))), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__material_ui_core_Button___default.a, {
     color: "primary",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 33
     }
   }, "Test Material UI"), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 34
     }
   }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 35
     }
   }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_Grid___default.a, {
     container: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 36
     }
   }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_Grid___default.a, {
     item: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 37
     }
   }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_Grid___default.a, {
     item: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 39
     }
   }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__src_components_Countries__["a" /* default */], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 40
     }
   }))));
 };
@@ -577,6 +565,13 @@ var countries = [{
 
 module.exports = __webpack_require__("./pages/index.tsx");
 
+
+/***/ }),
+
+/***/ "@material-ui/core/AppBar":
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/core/AppBar");
 
 /***/ }),
 
