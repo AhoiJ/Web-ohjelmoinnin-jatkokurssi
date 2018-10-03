@@ -96,8 +96,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__material_ui_core_Button___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__material_ui_core_Button__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__material_ui_core_Grid__ = __webpack_require__("@material-ui/core/Grid");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__material_ui_core_Grid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_Grid__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__material_ui_core_AppBar__ = __webpack_require__("@material-ui/core/AppBar");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__material_ui_core_AppBar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__material_ui_core_AppBar__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__src_components_AppBar__ = __webpack_require__("./src/components/AppBar.tsx");
 var _jsxFileName = "/home/jere/with-typescript-app/src/Home.tsx";
 
 
@@ -110,85 +109,172 @@ var Home = function Home() {
   return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 11
     }
-  }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__material_ui_core_AppBar___default.a, {
-    style: {
-      backgroudColor: muiTheme.palette.primary1Color,
-      flexWrap: 'wrap'
-    },
-    showMenuIconButton: true,
-    title: __WEBPACK_IMPORTED_MODULE_5__material_ui_core_AppBar___default.a,
-    titleStyle: muiTheme.title,
-    iconClassNameRight: "muidocs-icon-navigation-expand-more",
+  }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__src_components_AppBar__["a" /* default */], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 12
     }
   }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 13
     }
   }, "Hello worlds!!"), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 14
     }
   }, "p", __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_0_next_link___default.a, {
     href: "/about",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 15
     }
   }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 16
     }
   }, "About"))), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__material_ui_core_Button___default.a, {
     color: "primary",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 19
     }
   }, "Test Material UI"), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 20
     }
   }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 21
     }
   }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_Grid___default.a, {
     container: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 22
     }
   }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_Grid___default.a, {
     item: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 23
     }
   }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_Grid___default.a, {
     item: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 25
     }
   }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__src_components_Countries__["a" /* default */], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 26
     }
   }))));
 };
 
 /* harmony default export */ __webpack_exports__["a"] = (Home);
+
+/***/ }),
+
+/***/ "./src/components/AppBar.tsx":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__("prop-types");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__material_ui_core_AppBar__ = __webpack_require__("@material-ui/core/AppBar");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__material_ui_core_AppBar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__material_ui_core_AppBar__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__material_ui_core_Toolbar__ = __webpack_require__("@material-ui/core/Toolbar");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__material_ui_core_Toolbar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__material_ui_core_Toolbar__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__material_ui_core_Typography__ = __webpack_require__("@material-ui/core/Typography");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__material_ui_core_Typography___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_Typography__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__material_ui_core_Button__ = __webpack_require__("@material-ui/core/Button");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__material_ui_core_Button___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__material_ui_core_Button__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__material_ui_core_IconButton__ = __webpack_require__("@material-ui/core/IconButton");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__material_ui_core_IconButton___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_IconButton__);
+var _jsxFileName = "/home/jere/with-typescript-app/src/components/AppBar.tsx";
+
+
+
+
+
+
+
+var styles = {
+  root: {
+    flexGrow: 1
+  },
+  grow: {
+    flexGrow: 1
+  },
+  menuButton: {
+    marginLeft: -12,
+    marginRight: 20
+  }
+};
+
+function ButtonAppBar(props) {
+  var classes = props.classes;
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+    className: classes.root,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__material_ui_core_AppBar___default.a, {
+    position: "static",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__material_ui_core_Toolbar___default.a, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_core_IconButton___default.a, {
+    className: classes.menuButton,
+    color: "inherit",
+    "aria-label": "Menu",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    }
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(MenuIcon, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    }
+  })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__material_ui_core_Typography___default.a, {
+    variant: "h6",
+    color: "inherit",
+    className: classes.grow,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
+    }
+  }, "News"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__material_ui_core_Button___default.a, {
+    color: "inherit",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36
+    }
+  }, "Login"))));
+}
+
+ButtonAppBar.propTypes = {
+  classes: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object.isRequired
+};
+/* harmony default export */ __webpack_exports__["a"] = (ButtonAppBar);
 
 /***/ }),
 
@@ -589,6 +675,13 @@ module.exports = require("@material-ui/core/Grid");
 
 /***/ }),
 
+/***/ "@material-ui/core/IconButton":
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/core/IconButton");
+
+/***/ }),
+
 /***/ "@material-ui/core/Paper":
 /***/ (function(module, exports) {
 
@@ -631,10 +724,31 @@ module.exports = require("@material-ui/core/TableRow");
 
 /***/ }),
 
+/***/ "@material-ui/core/Toolbar":
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/core/Toolbar");
+
+/***/ }),
+
+/***/ "@material-ui/core/Typography":
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/core/Typography");
+
+/***/ }),
+
 /***/ "next/link":
 /***/ (function(module, exports) {
 
 module.exports = require("next/link");
+
+/***/ }),
+
+/***/ "prop-types":
+/***/ (function(module, exports) {
+
+module.exports = require("prop-types");
 
 /***/ }),
 
