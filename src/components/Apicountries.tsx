@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -6,19 +6,26 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import axios from 'axios'
-// import coutries from '../countries'
-import Apicountries from '../Apicountries';
 import Country from './Country';
 
 
+class Apicountries extends Component{
+constructor() {
+  super();
 
-interface ICountriesState {
+  this.state ={countries:[]}
 }
 
 
-class Countries extends React.Component<{}, ICountriesState> {
-  public render() {
-    const{ countries } = this.state;
+componentDidMount() {
+   fetch('https://restcountries.eu/rest/v2/all')
+     .then(response => response.json())
+     .then(({results: countries}) => this.setState({countries}))
+   }
+
+   render() {
+  //   let countries = this.state.countries
+    const { countries } = this.state;
     return (
         <Paper>
           <h1>Countries</h1>
@@ -45,7 +52,7 @@ class Countries extends React.Component<{}, ICountriesState> {
           </Table>
         </Paper>
     )
-  };
+  }
 }
 
-export default Countries;
+export default Apicountries;
