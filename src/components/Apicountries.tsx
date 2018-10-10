@@ -17,11 +17,13 @@ constructor() {
 }
 
 
-componentDidMount() {
-   fetch('https://restcountries.eu/rest/v2/all')
-     .then(response => response.json())
-     .then(({results: countries}) => this.setState({countries}))
-   }
+async componentDidMount() {
+  const response = await fetch('https://restcountries.eu/rest/v2/all')
+  const data = await response.json();
+  console.log('data is here:', data);
+  this.setState({ countries: data });
+
+}
 
    render() {
   //   let countries = this.state.countries
@@ -39,15 +41,15 @@ componentDidMount() {
                   Population
                 </TableCell>
                 <TableCell>
-                  Percentage
+                  Capital
                 </TableCell>
                 <TableCell>
-                  Position
+                  Region
                 </TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
-              {countries.map(country => <Country prop1={country} />)}
+              {countries.map(country  => <Country prop1={country} />)}
             </TableBody>
           </Table>
         </Paper>

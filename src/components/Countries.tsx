@@ -6,8 +6,8 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import axios from 'axios'
-// import coutries from '../countries'
-import Apicountries from '../Apicountries';
+import countries from '../countries'
+//import Apicountries from '../Apicountries';
 import Country from './Country';
 
 
@@ -18,7 +18,6 @@ interface ICountriesState {
 
 class Countries extends React.Component<{}, ICountriesState> {
   public render() {
-    const{ countries } = this.state;
     return (
         <Paper>
           <h1>Countries</h1>

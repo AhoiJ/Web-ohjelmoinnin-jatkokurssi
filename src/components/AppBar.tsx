@@ -9,7 +9,8 @@ const Navbar: React.SFC<{}> = () => (
     <Toolbar>
       <Link href="/"><Button color="inherit">Home</Button></Link>
       <Link href="/clock"><Button color="inherit">Clock</Button></Link>
-      <Link href="/countries"><Button color="inherit">Countries</Button></Link>
+      <Link href="/countries_local"><Button color="inherit">Local Countries</Button></Link>
+      <Link href="/countries_remote"><Button color="inherit">Remote Countries</Button></Link>
     </Toolbar>
   </AppBar>
 )
