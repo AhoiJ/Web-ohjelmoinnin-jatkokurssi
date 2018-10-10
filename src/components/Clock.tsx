@@ -30,12 +30,18 @@ this.timerID = window.setInterval(
 
 public render() {
   let dateNow = new Date();
+  const hourZero = dateNow.getHours() < 10 ? '0' :"" ;
+  const minuteZero = dateNow.getMinutes() < 10 ? '0' :"" ;
+  const secondZero = dateNow.getSeconds() < 10 ? '0' : "";
+  const dateString = `Nyt on ${hourZero}${dateNow.getHours()}.${minuteZero}${dateNow.getMinutes()}.${secondZero}${dateNow.getSeconds()}`;
   return (
     <div>
-      
+===================================
+      <br/>
+      {dateString}
       <br />
-      {`Kello on ${dateNow.getHours()}.${dateNow.getMinutes()}.${dateNow.getSeconds()}`}
       <br />
+    ===================================
     </div>
   )
 }

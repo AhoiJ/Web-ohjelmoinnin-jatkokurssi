@@ -19,6 +19,7 @@ const Home: React.SFC<{prop1: string, prop2: number}> = () => {
       <Grid item={true}>
       </Grid>
       <Grid item={true}>
+        /* chosen countries */
         <Countries />
       </Grid>
     </Grid>

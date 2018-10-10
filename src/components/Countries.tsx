@@ -17,6 +17,9 @@ interface ICountriesState {
 
 
 class Countries extends React.Component<{}, ICountriesState> {
+
+//  var chosen_countries = [];
+
   public render() {
     return (
         <Paper>
