@@ -6,7 +6,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import axios from 'axios'
-import Country from './Country';
+import Country_remote from './Country_remote';
 
 
 class Apicountries extends Component{
@@ -49,7 +49,7 @@ async componentDidMount() {
               </TableRow>
             </TableHead>
             <TableBody>
-              {countries.map(country  => <Country prop1={country} />)}
+              {countries.map(country  => <Country_remote prop1={country} />)}
             </TableBody>
           </Table>
         </Paper>

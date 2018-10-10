@@ -4,7 +4,7 @@ interface ICountryProp {
   prop1?: object;
 }
 
-const Country: React.SFC<ICountryProp> = ({ prop1 = {} }) => {
+const Country_remote: React.SFC<ICountryProp> = ({ prop1 = {} }) => {
   return (
       <TableRow>
         {console.log('DEBUG: ', prop1)}
@@ -15,13 +15,13 @@ const Country: React.SFC<ICountryProp> = ({ prop1 = {} }) => {
               {prop1.population}
             </TableCell>
             <TableCell>
-              {prop1.percentage}
+              {prop1.capital}
             </TableCell>
             <TableCell>
-              {prop1.position}
+              {prop1.region}
             </TableCell>
         </TableRow>
   )
 }
 
-export default Country;
+export default Country_remote;
