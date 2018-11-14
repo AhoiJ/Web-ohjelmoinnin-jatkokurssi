@@ -12,7 +12,6 @@ import Country_remote from './Country_remote';
 class Apicountries extends Component{
 constructor() {
   super();
-
   this.state ={countries:[]}
 }
 

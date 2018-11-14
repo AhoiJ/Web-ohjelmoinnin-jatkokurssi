@@ -3,20 +3,6 @@ __NEXT_REGISTER_PAGE('/_app', function() {
           var comp =
       webpackJsonp([1],{
 
-/***/ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js":
-/***/ (function(module, exports) {
-
-function _getPrototypeOf(o) {
-  module.exports = _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
-module.exports = _getPrototypeOf;
-
-/***/ }),
-
 /***/ "./node_modules/@material-ui/core/CssBaseline/CssBaseline.js":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -36,7 +22,7 @@ var _createClass2 = _interopRequireDefault(__webpack_require__("./node_modules/n
 
 var _possibleConstructorReturn2 = _interopRequireDefault(__webpack_require__("./node_modules/next/node_modules/@babel/runtime/helpers/possibleConstructorReturn.js"));
 
-var _getPrototypeOf2 = _interopRequireDefault(__webpack_require__("./node_modules/@babel/runtime/helpers/getPrototypeOf.js"));
+var _getPrototypeOf2 = _interopRequireDefault(__webpack_require__("./node_modules/@material-ui/core/node_modules/@babel/runtime/helpers/getPrototypeOf.js"));
 
 var _inherits2 = _interopRequireDefault(__webpack_require__("./node_modules/next/node_modules/@babel/runtime/helpers/inherits.js"));
 
@@ -46,7 +32,7 @@ var _propTypes = _interopRequireDefault(__webpack_require__("./node_modules/next
 
 var _styles = __webpack_require__("./node_modules/@material-ui/core/styles/index.js");
 
-var _exactProp = _interopRequireDefault(__webpack_require__("./node_modules/@material-ui/core/utils/exactProp.js"));
+var _utils = __webpack_require__("./node_modules/@material-ui/utils/index.es.js");
 
 /* eslint-disable react/no-unused-prop-types */
 var styles = function styles(theme) {
@@ -111,7 +97,7 @@ CssBaseline.propTypes =  true ? {
    */
   classes: _propTypes.default.object.isRequired
 } : {};
-CssBaseline.propTypes =  true ? (0, _exactProp.default)(CssBaseline.propTypes) : {};
+CssBaseline.propTypes =  true ? (0, _utils.exactProp)(CssBaseline.propTypes) : {};
 CssBaseline.defaultProps = {
   children: null
 };
@@ -351,6 +337,20 @@ exports.default = _default;
 
 /***/ }),
 
+/***/ "./node_modules/@material-ui/core/node_modules/@babel/runtime/helpers/getPrototypeOf.js":
+/***/ (function(module, exports) {
+
+function _getPrototypeOf(o) {
+  module.exports = _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
+}
+
+module.exports = _getPrototypeOf;
+
+/***/ }),
+
 /***/ "./node_modules/@material-ui/core/node_modules/warning/warning.js":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -434,7 +434,7 @@ var _interopRequireDefault = __webpack_require__("./node_modules/next/node_modul
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports.default = exports.MuiThemeProviderOld = void 0;
 
 var _extends2 = _interopRequireDefault(__webpack_require__("./node_modules/next/node_modules/@babel/runtime/helpers/extends.js"));
 
@@ -446,7 +446,7 @@ var _createClass2 = _interopRequireDefault(__webpack_require__("./node_modules/n
 
 var _possibleConstructorReturn2 = _interopRequireDefault(__webpack_require__("./node_modules/next/node_modules/@babel/runtime/helpers/possibleConstructorReturn.js"));
 
-var _getPrototypeOf2 = _interopRequireDefault(__webpack_require__("./node_modules/@babel/runtime/helpers/getPrototypeOf.js"));
+var _getPrototypeOf2 = _interopRequireDefault(__webpack_require__("./node_modules/@material-ui/core/node_modules/@babel/runtime/helpers/getPrototypeOf.js"));
 
 var _inherits2 = _interopRequireDefault(__webpack_require__("./node_modules/next/node_modules/@babel/runtime/helpers/inherits.js"));
 
@@ -458,30 +458,30 @@ var _warning = _interopRequireDefault(__webpack_require__("./node_modules/@mater
 
 var _brcast = _interopRequireDefault(__webpack_require__("./node_modules/brcast/dist/brcast.es.js"));
 
+var _utils = __webpack_require__("./node_modules/@material-ui/utils/index.es.js");
+
 var _themeListener = _interopRequireWildcard(__webpack_require__("./node_modules/@material-ui/core/styles/themeListener.js"));
 
-var _exactProp = _interopRequireDefault(__webpack_require__("./node_modules/@material-ui/core/utils/exactProp.js"));
+/* eslint-disable no-underscore-dangle */
 
 /**
  * This component takes a `theme` property.
  * It makes the `theme` available down the React tree thanks to React context.
  * This component should preferably be used at **the root of your component tree**.
  */
-var MuiThemeProvider =
+var MuiThemeProviderOld =
 /*#__PURE__*/
 function (_React$Component) {
-  (0, _inherits2.default)(MuiThemeProvider, _React$Component);
+  (0, _inherits2.default)(MuiThemeProviderOld, _React$Component);
 
   // We are not using the React state in order to avoid unnecessary rerender.
-  function MuiThemeProvider(props, context) {
+  function MuiThemeProviderOld(props, context) {
     var _this;
 
-    (0, _classCallCheck2.default)(this, MuiThemeProvider);
-    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(MuiThemeProvider).call(this)); // Get the outer theme from the context, can be null
+    (0, _classCallCheck2.default)(this, MuiThemeProviderOld);
+    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(MuiThemeProviderOld).call(this)); // Get the outer theme from the context, can be null
 
     _this.broadcast = (0, _brcast.default)();
-    _this.unsubscribeId = null;
-    _this.outerTheme = null;
     _this.outerTheme = _themeListener.default.initial(context); // Propagate the theme so it can be accessed by the children
 
     _this.broadcast.setState(_this.mergeOuterLocalTheme(props.theme));
@@ -489,22 +489,27 @@ function (_React$Component) {
     return _this;
   }
 
-  (0, _createClass2.default)(MuiThemeProvider, [{
+  (0, _createClass2.default)(MuiThemeProviderOld, [{
     key: "getChildContext",
     value: function getChildContext() {
       var _ref;
 
       var _this$props = this.props,
-          sheetsManager = _this$props.sheetsManager,
-          disableStylesGeneration = _this$props.disableStylesGeneration;
+          disableStylesGeneration = _this$props.disableStylesGeneration,
+          sheetsCache = _this$props.sheetsCache,
+          sheetsManager = _this$props.sheetsManager;
       var muiThemeProviderOptions = this.context.muiThemeProviderOptions || {};
-
-      if (sheetsManager !== undefined) {
-        muiThemeProviderOptions.sheetsManager = sheetsManager;
-      }
 
       if (disableStylesGeneration !== undefined) {
         muiThemeProviderOptions.disableStylesGeneration = disableStylesGeneration;
+      }
+
+      if (sheetsCache !== undefined) {
+        muiThemeProviderOptions.sheetsCache = sheetsCache;
+      }
+
+      if (sheetsManager !== undefined) {
+        muiThemeProviderOptions.sheetsManager = sheetsManager;
       }
 
       return _ref = {}, (0, _defineProperty2.default)(_ref, _themeListener.CHANNEL, this.broadcast), (0, _defineProperty2.default)(_ref, "muiThemeProviderOptions", muiThemeProviderOptions), _ref;
@@ -567,10 +572,11 @@ function (_React$Component) {
       return this.props.children;
     }
   }]);
-  return MuiThemeProvider;
+  return MuiThemeProviderOld;
 }(_react.default.Component);
 
-MuiThemeProvider.propTypes =  true ? {
+exports.MuiThemeProviderOld = MuiThemeProviderOld;
+MuiThemeProviderOld.propTypes =  true ? {
   /**
    * You can wrap a node.
    */
@@ -587,6 +593,13 @@ MuiThemeProvider.propTypes =  true ? {
   disableStylesGeneration: _propTypes.default.bool,
 
   /**
+   * @ignore
+   *
+   * In beta.
+   */
+  sheetsCache: _propTypes.default.object,
+
+  /**
    * The sheetsManager is used to deduplicate style sheet injection in the page.
    * It's deduplicating using the (theme, styles) couple.
    * On the server, you should provide a new instance for each request.
@@ -598,14 +611,24 @@ MuiThemeProvider.propTypes =  true ? {
    */
   theme: _propTypes.default.oneOfType([_propTypes.default.object, _propTypes.default.func]).isRequired
 } : {};
-MuiThemeProvider.propTypes =  true ? (0, _exactProp.default)(MuiThemeProvider.propTypes) : {};
-MuiThemeProvider.childContextTypes = (0, _extends2.default)({}, _themeListener.default.contextTypes, {
+MuiThemeProviderOld.propTypes =  true ? (0, _utils.exactProp)(MuiThemeProviderOld.propTypes) : {};
+MuiThemeProviderOld.childContextTypes = (0, _extends2.default)({}, _themeListener.default.contextTypes, {
   muiThemeProviderOptions: _propTypes.default.object
 });
-MuiThemeProvider.contextTypes = (0, _extends2.default)({}, _themeListener.default.contextTypes, {
+MuiThemeProviderOld.contextTypes = (0, _extends2.default)({}, _themeListener.default.contextTypes, {
   muiThemeProviderOptions: _propTypes.default.object
 });
-var _default = MuiThemeProvider;
+/* istanbul ignore if */
+
+if (!_utils.ponyfillGlobal.__MUI_STYLES__) {
+  _utils.ponyfillGlobal.__MUI_STYLES__ = {};
+}
+
+if (!_utils.ponyfillGlobal.__MUI_STYLES__.MuiThemeProvider) {
+  _utils.ponyfillGlobal.__MUI_STYLES__.MuiThemeProvider = MuiThemeProviderOld;
+}
+
+var _default = _utils.ponyfillGlobal.__MUI_STYLES__.MuiThemeProvider;
 exports.default = _default;
 
 /***/ }),
@@ -1033,35 +1056,19 @@ function createGenerateClassName() {
   var ruleCounter = 0;
   return function (rule, styleSheet) {
     ruleCounter += 1;
-     true ? (0, _warning.default)(ruleCounter < 1e10, ['Material-UI: you might have a memory leak.', 'The ruleCounter is not supposed to grow that much.'].join('')) : void 0; // Code branch the whole block at the expense of more code.
+     true ? (0, _warning.default)(ruleCounter < 1e10, ['Material-UI: you might have a memory leak.', 'The ruleCounter is not supposed to grow that much.'].join('')) : void 0;
 
-    if (dangerouslyUseGlobalCSS) {
-      if (styleSheet) {
-        if (styleSheet.options.name) {
-          return "".concat(styleSheet.options.name, "-").concat(rule.key);
-        }
-
-        if (styleSheet.options.classNamePrefix && "development" !== 'production') {
-          var prefix = safePrefix(styleSheet.options.classNamePrefix);
-          return "".concat(prefix, "-").concat(rule.key, "-").concat(seed).concat(ruleCounter);
-        }
-      }
-
-      if (false) {
-        return "".concat(productionPrefix).concat(seed).concat(ruleCounter);
-      }
-
-      return "".concat(rule.key, "-").concat(seed).concat(ruleCounter);
+    if (dangerouslyUseGlobalCSS && styleSheet && styleSheet.options.name) {
+      return "".concat(safePrefix(styleSheet.options.name), "-").concat(rule.key);
     }
 
     if (false) {
       return "".concat(productionPrefix).concat(seed).concat(ruleCounter);
-    }
+    } // Help with debuggability.
+
 
     if (styleSheet && styleSheet.options.classNamePrefix) {
-      var _prefix = safePrefix(styleSheet.options.classNamePrefix);
-
-      return "".concat(_prefix, "-").concat(rule.key, "-").concat(seed).concat(ruleCounter);
+      return "".concat(safePrefix(styleSheet.options.classNamePrefix), "-").concat(rule.key, "-").concat(seed).concat(ruleCounter);
     }
 
     return "".concat(rule.key, "-").concat(seed).concat(ruleCounter);
@@ -1164,15 +1171,18 @@ function createMuiTheme() {
       _options$palette = options.palette,
       paletteInput = _options$palette === void 0 ? {} : _options$palette,
       shadowsInput = options.shadows,
+      _options$spacing = options.spacing,
+      spacingInput = _options$spacing === void 0 ? {} : _options$spacing,
       _options$typography = options.typography,
       typographyInput = _options$typography === void 0 ? {} : _options$typography,
-      other = (0, _objectWithoutProperties2.default)(options, ["breakpoints", "mixins", "palette", "shadows", "typography"]);
+      other = (0, _objectWithoutProperties2.default)(options, ["breakpoints", "mixins", "palette", "shadows", "spacing", "typography"]);
   var palette = (0, _createPalette.default)(paletteInput);
   var breakpoints = (0, _createBreakpoints.default)(breakpointsInput);
+  var spacing = (0, _extends2.default)({}, _spacing.default, spacingInput);
   var muiTheme = (0, _extends2.default)({
     breakpoints: breakpoints,
     direction: 'ltr',
-    mixins: (0, _createMixins.default)(breakpoints, _spacing.default, mixinsInput),
+    mixins: (0, _createMixins.default)(breakpoints, spacing, mixinsInput),
     overrides: {},
     // Inject custom styles
     palette: palette,
@@ -1182,7 +1192,7 @@ function createMuiTheme() {
     typography: (0, _createTypography.default)(palette, typographyInput)
   }, (0, _deepmerge.default)({
     shape: _shape.default,
-    spacing: _spacing.default,
+    spacing: spacing,
     transitions: _transitions.default,
     zIndex: _zIndex.default
   }, other, {
@@ -1364,6 +1374,8 @@ function createPalette(palette) {
     if (!color.contrastText) {
       color.contrastText = getContrastText(color.main);
     }
+
+    return color;
   }
 
   augmentColor(primary);
@@ -1443,15 +1455,28 @@ var _objectWithoutProperties2 = _interopRequireDefault(__webpack_require__("./no
 
 var _deepmerge = _interopRequireDefault(__webpack_require__("./node_modules/deepmerge/dist/es.js"));
 
+var _warning = _interopRequireDefault(__webpack_require__("./node_modules/@material-ui/core/node_modules/warning/warning.js"));
+
+var _utils = __webpack_require__("./node_modules/@material-ui/utils/index.es.js");
+
 // < 1kb payload overhead when lodash/merge is > 3kb.
 function round(value) {
   return Math.round(value * 1e5) / 1e5;
 }
 
+var caseAllCaps = {
+  textTransform: 'uppercase'
+};
+var defaultFontFamily = '"Roboto", "Helvetica", "Arial", sans-serif';
+/**
+ * @see @link{https://material.io/design/typography/the-type-system.html}
+ * @see @link{https://material.io/design/typography/understanding-typography.html}
+ */
+
 function createTypography(palette, typography) {
   var _ref = typeof typography === 'function' ? typography(palette) : typography,
       _ref$fontFamily = _ref.fontFamily,
-      fontFamily = _ref$fontFamily === void 0 ? '"Roboto", "Helvetica", "Arial", sans-serif' : _ref$fontFamily,
+      fontFamily = _ref$fontFamily === void 0 ? defaultFontFamily : _ref$fontFamily,
       _ref$fontSize = _ref.fontSize,
       fontSize = _ref$fontSize === void 0 ? 14 : _ref$fontSize,
       _ref$fontWeightLight = _ref.fontWeightLight,
@@ -1462,23 +1487,50 @@ function createTypography(palette, typography) {
       fontWeightMedium = _ref$fontWeightMedium === void 0 ? 500 : _ref$fontWeightMedium,
       _ref$htmlFontSize = _ref.htmlFontSize,
       htmlFontSize = _ref$htmlFontSize === void 0 ? 16 : _ref$htmlFontSize,
+      _ref$useNextVariants = _ref.useNextVariants,
+      useNextVariants = _ref$useNextVariants === void 0 ? Boolean(_utils.ponyfillGlobal.__MUI_USE_NEXT_TYPOGRAPHY_VARIANTS__) : _ref$useNextVariants,
+      _ref$suppressWarning = _ref.suppressWarning,
+      suppressWarning = _ref$suppressWarning === void 0 ? false : _ref$suppressWarning,
       allVariants = _ref.allVariants,
-      other = (0, _objectWithoutProperties2.default)(_ref, ["fontFamily", "fontSize", "fontWeightLight", "fontWeightRegular", "fontWeightMedium", "htmlFontSize", "allVariants"]);
+      other = (0, _objectWithoutProperties2.default)(_ref, ["fontFamily", "fontSize", "fontWeightLight", "fontWeightRegular", "fontWeightMedium", "htmlFontSize", "useNextVariants", "suppressWarning", "allVariants"]);
 
+   true ? (0, _warning.default)(useNextVariants || suppressWarning, 'Material-UI: you are using the deprecated typography variants ' + 'that will be removed in the next major release.' + '\nPlease read the migration guide under https://material-ui.com/style/typography#migration-to-typography-v2') : void 0;
   var coef = fontSize / 14;
 
-  function pxToRem(value) {
-    return "".concat(value / htmlFontSize * coef, "rem");
-  }
+  var pxToRem = function pxToRem(size) {
+    return "".concat(size / htmlFontSize * coef, "rem");
+  };
 
-  return (0, _deepmerge.default)({
-    pxToRem: pxToRem,
-    round: round,
-    fontFamily: fontFamily,
-    fontSize: fontSize,
-    fontWeightLight: fontWeightLight,
-    fontWeightRegular: fontWeightRegular,
-    fontWeightMedium: fontWeightMedium,
+  var buildVariant = function buildVariant(fontWeight, size, lineHeight, letterSpacing, casing) {
+    return (0, _extends2.default)({
+      color: palette.text.primary,
+      fontFamily: fontFamily,
+      fontWeight: fontWeight,
+      fontSize: pxToRem(size),
+      // Unitless following http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/
+      lineHeight: lineHeight
+    }, fontFamily === defaultFontFamily ? {
+      letterSpacing: "".concat(round(letterSpacing / size), "em")
+    } : {}, casing, allVariants);
+  };
+
+  var nextVariants = {
+    h1: buildVariant(fontWeightLight, 96, 1, -1.5),
+    h2: buildVariant(fontWeightLight, 60, 1, -0.5),
+    h3: buildVariant(fontWeightRegular, 48, 1.04, 0),
+    h4: buildVariant(fontWeightRegular, 34, 1.17, 0.25),
+    h5: buildVariant(fontWeightRegular, 24, 1.33, 0),
+    h6: buildVariant(fontWeightMedium, 20, 1.6, 0.15),
+    subtitle1: buildVariant(fontWeightRegular, 16, 1.75, 0.15),
+    subtitle2: buildVariant(fontWeightMedium, 14, 1.57, 0.1),
+    body1Next: buildVariant(fontWeightRegular, 16, 1.5, 0.15),
+    body2Next: buildVariant(fontWeightRegular, 14, 1.5, 0.15),
+    buttonNext: buildVariant(fontWeightMedium, 14, 1.5, 0.4, caseAllCaps),
+    captionNext: buildVariant(fontWeightRegular, 12, 1.66, 0.4),
+    overline: buildVariant(fontWeightRegular, 12, 2.66, 1, caseAllCaps)
+  }; // To remove in v4
+
+  var oldVariants = {
     display4: (0, _extends2.default)({
       fontSize: pxToRem(112),
       fontWeight: fontWeightLight,
@@ -1561,7 +1613,23 @@ function createTypography(palette, typography) {
       fontFamily: fontFamily,
       color: palette.text.primary
     }, allVariants)
-  }, other, {
+  };
+  return (0, _deepmerge.default)((0, _extends2.default)({
+    pxToRem: pxToRem,
+    round: round,
+    fontFamily: fontFamily,
+    fontSize: fontSize,
+    fontWeightLight: fontWeightLight,
+    fontWeightRegular: fontWeightRegular,
+    fontWeightMedium: fontWeightMedium
+  }, oldVariants, nextVariants, useNextVariants ? {
+    body1: nextVariants.body1Next,
+    body2: nextVariants.body2Next,
+    button: nextVariants.buttonNext,
+    caption: nextVariants.captionNext
+  } : {}, {
+    useNextVariants: useNextVariants
+  }), other, {
     clone: false // No need to clone deep
 
   });
@@ -1647,7 +1715,7 @@ function getThemeProps(params) {
       name = params.name,
       props = params.props;
 
-  if (!name || !theme.props || !theme.props[name]) {
+  if (!theme.props || !name || !theme.props[name]) {
     return props;
   } // Resolve default props, code borrow from React source.
   // https://github.com/facebook/react/blob/15a8f031838a553e41c0b66eb1bcf1da8448104d/packages/react/src/ReactElement.js#L221
@@ -1765,11 +1833,13 @@ var _jssVendorPrefixer = _interopRequireDefault(__webpack_require__("./node_modu
 
 var _jssPropsSort = _interopRequireDefault(__webpack_require__("./node_modules/jss-props-sort/lib/index.js"));
 
-// Subset of jss-preset-default with only the plugins the Material-UI
-// components are using.
+// Subset of jss-preset-default with only the plugins the Material-UI components are using.
 function jssPreset() {
   return {
-    plugins: [(0, _jssGlobal.default)(), (0, _jssNested.default)(), (0, _jssCamelCase.default)(), (0, _jssDefaultUnit.default)(), (0, _jssVendorPrefixer.default)(), (0, _jssPropsSort.default)()]
+    plugins: [(0, _jssGlobal.default)(), (0, _jssNested.default)(), (0, _jssCamelCase.default)(), (0, _jssDefaultUnit.default)(), // Disable the vendor prefixer server-side, it does nothing.
+    // This way, we can get a performance boost.
+    // In the documentation, we are using `autoprefixer` to solve this problem.
+    typeof window === 'undefined' ? null : (0, _jssVendorPrefixer.default)(), (0, _jssPropsSort.default)()]
   };
 }
 
@@ -1795,33 +1865,91 @@ var _extends2 = _interopRequireDefault(__webpack_require__("./node_modules/next/
 
 var _warning = _interopRequireDefault(__webpack_require__("./node_modules/@material-ui/core/node_modules/warning/warning.js"));
 
-var _getDisplayName = _interopRequireDefault(__webpack_require__("./node_modules/@material-ui/core/utils/getDisplayName.js"));
+var _utils = __webpack_require__("./node_modules/@material-ui/utils/index.es.js");
 
 function mergeClasses() {
   var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var baseClasses = options.baseClasses,
       newClasses = options.newClasses,
-      Component = options.Component,
-      _options$noBase = options.noBase,
-      noBase = _options$noBase === void 0 ? false : _options$noBase;
+      Component = options.Component;
 
   if (!newClasses) {
     return baseClasses;
   }
 
-  return (0, _extends2.default)({}, baseClasses, Object.keys(newClasses).reduce(function (accumulator, key) {
-     true ? (0, _warning.default)(baseClasses[key] || noBase || !newClasses[key], ["Material-UI: the key `".concat(key, "` ") + "provided to the classes property is not implemented in ".concat((0, _getDisplayName.default)(Component), "."), "You can only override one of the following: ".concat(Object.keys(baseClasses).join(','))].join('\n')) : void 0;
-     true ? (0, _warning.default)(!newClasses[key] || typeof newClasses[key] === 'string', ["Material-UI: the key `".concat(key, "` ") + "provided to the classes property is not valid for ".concat((0, _getDisplayName.default)(Component), "."), "You need to provide a non empty string instead of: ".concat(newClasses[key], ".")].join('\n')) : void 0;
-
-    if (newClasses[key]) {
-      accumulator[key] = "".concat(baseClasses[key], " ").concat(newClasses[key]);
+  var nextClasses = (0, _extends2.default)({}, baseClasses);
+  Object.keys(newClasses).forEach(function (key) {
+    if (Component) {
+       true ? (0, _warning.default)(baseClasses[key] || !newClasses[key], ["Material-UI: the key `".concat(key, "` ") + "provided to the classes property is not implemented in ".concat((0, _utils.getDisplayName)(Component), "."), "You can only override one of the following: ".concat(Object.keys(baseClasses).join(','), ".")].join('\n')) : void 0;
+       true ? (0, _warning.default)(!newClasses[key] || typeof newClasses[key] === 'string', ["Material-UI: the key `".concat(key, "` ") + "provided to the classes property is not valid for ".concat((0, _utils.getDisplayName)(Component), "."), "You need to provide a non empty string instead of: ".concat(newClasses[key], ".")].join('\n')) : void 0;
     }
 
-    return accumulator;
-  }, {}));
+    if (newClasses[key]) {
+      nextClasses[key] = "".concat(baseClasses[key], " ").concat(newClasses[key]);
+    }
+  });
+  return nextClasses;
 }
 
 var _default = mergeClasses;
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/styles/multiKeyStore.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+// Used https://github.com/thinkloop/multi-key-cache as inspiration
+var multiKeyStore = {
+  set: function set(cache, key1, key2, value) {
+    var subCache = cache.get(key1);
+
+    if (!subCache) {
+      subCache = new Map();
+      cache.set(key1, subCache);
+    }
+
+    subCache.set(key2, value);
+  },
+  get: function get(cache, key1, key2) {
+    var subCache = cache.get(key1);
+    return subCache ? subCache.get(key2) : undefined;
+  },
+  delete: function _delete(cache, key1, key2) {
+    var subCache = cache.get(key1);
+    subCache.delete(key2);
+  }
+};
+var _default = multiKeyStore;
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/styles/reactJssContext.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+// Share the same values than in
+// https://github.com/cssinjs/jss/blob/master/packages/react-jss/src/ns.js
+var ns = {
+  jss: '64a55d578f856d258dc345b094a2a2b3',
+  sheetsRegistry: 'd4bd0baacbc52bbd48bbb9eb24344ecd',
+  sheetOptions: '6fc570d6bd61383819d0f9e7407c452d'
+};
+var _default = ns;
 exports.default = _default;
 
 /***/ }),
@@ -1903,13 +2031,11 @@ exports.default = exports.CHANNEL = void 0;
 
 var _defineProperty2 = _interopRequireDefault(__webpack_require__("./node_modules/next/node_modules/@babel/runtime/helpers/defineProperty.js"));
 
-var _propTypes = _interopRequireDefault(__webpack_require__("./node_modules/next/node_modules/prop-types/index.js"));
-
 // Same value used by react-jss
 var CHANNEL = '__THEMING__';
 exports.CHANNEL = CHANNEL;
 var themeListener = {
-  contextTypes: (0, _defineProperty2.default)({}, CHANNEL, _propTypes.default.object),
+  contextTypes: (0, _defineProperty2.default)({}, CHANNEL, function () {}),
   initial: function initial(context) {
     if (!context[CHANNEL]) {
       return null;
@@ -2054,8 +2180,6 @@ exports.default = _default;
 "use strict";
 
 
-var _interopRequireWildcard = __webpack_require__("./node_modules/next/node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
 var _interopRequireDefault = __webpack_require__("./node_modules/next/node_modules/@babel/runtime/helpers/interopRequireDefault.js");
 
 Object.defineProperty(exports, "__esModule", {
@@ -2063,7 +2187,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = exports.sheetsManager = void 0;
 
-var _extends2 = _interopRequireDefault(__webpack_require__("./node_modules/next/node_modules/@babel/runtime/helpers/extends.js"));
+var _defineProperty2 = _interopRequireDefault(__webpack_require__("./node_modules/next/node_modules/@babel/runtime/helpers/defineProperty.js"));
+
+var _extends3 = _interopRequireDefault(__webpack_require__("./node_modules/next/node_modules/@babel/runtime/helpers/extends.js"));
 
 var _classCallCheck2 = _interopRequireDefault(__webpack_require__("./node_modules/next/node_modules/@babel/runtime/helpers/classCallCheck.js"));
 
@@ -2071,7 +2197,7 @@ var _createClass2 = _interopRequireDefault(__webpack_require__("./node_modules/n
 
 var _possibleConstructorReturn2 = _interopRequireDefault(__webpack_require__("./node_modules/next/node_modules/@babel/runtime/helpers/possibleConstructorReturn.js"));
 
-var _getPrototypeOf2 = _interopRequireDefault(__webpack_require__("./node_modules/@babel/runtime/helpers/getPrototypeOf.js"));
+var _getPrototypeOf2 = _interopRequireDefault(__webpack_require__("./node_modules/@material-ui/core/node_modules/@babel/runtime/helpers/getPrototypeOf.js"));
 
 var _inherits2 = _interopRequireDefault(__webpack_require__("./node_modules/next/node_modules/@babel/runtime/helpers/inherits.js"));
 
@@ -2085,17 +2211,17 @@ var _warning = _interopRequireDefault(__webpack_require__("./node_modules/@mater
 
 var _hoistNonReactStatics = _interopRequireDefault(__webpack_require__("./node_modules/next/node_modules/hoist-non-react-statics/index.js"));
 
-var _wrapDisplayName = _interopRequireDefault(__webpack_require__("./node_modules/recompose/wrapDisplayName.js"));
-
-var _contextTypes = _interopRequireDefault(__webpack_require__("./node_modules/react-jss/lib/contextTypes.js"));
+var _utils = __webpack_require__("./node_modules/@material-ui/utils/index.es.js");
 
 var _jss = __webpack_require__("./node_modules/jss/lib/index.js");
 
-var ns = _interopRequireWildcard(__webpack_require__("./node_modules/react-jss/lib/ns.js"));
+var _reactJssContext = _interopRequireDefault(__webpack_require__("./node_modules/@material-ui/core/styles/reactJssContext.js"));
 
 var _jssPreset = _interopRequireDefault(__webpack_require__("./node_modules/@material-ui/core/styles/jssPreset.js"));
 
 var _mergeClasses = _interopRequireDefault(__webpack_require__("./node_modules/@material-ui/core/styles/mergeClasses.js"));
+
+var _multiKeyStore = _interopRequireDefault(__webpack_require__("./node_modules/@material-ui/core/styles/multiKeyStore.js"));
 
 var _createMuiTheme = _interopRequireDefault(__webpack_require__("./node_modules/@material-ui/core/styles/createMuiTheme.js"));
 
@@ -2107,6 +2233,7 @@ var _getStylesCreator = _interopRequireDefault(__webpack_require__("./node_modul
 
 var _getThemeProps = _interopRequireDefault(__webpack_require__("./node_modules/@material-ui/core/styles/getThemeProps.js"));
 
+/* eslint-disable no-underscore-dangle */
 // Default JSS instance.
 var jss = (0, _jss.create)((0, _jssPreset.default)()); // Use a singleton or the provided one by the context.
 //
@@ -2136,16 +2263,23 @@ function getDefaultTheme() {
     return defaultTheme;
   }
 
-  defaultTheme = (0, _createMuiTheme.default)();
+  defaultTheme = (0, _createMuiTheme.default)({
+    typography: {
+      suppressWarning: true
+    }
+  });
   return defaultTheme;
-} // Link a style sheet with a component.
+}
+
+_utils.ponyfillGlobal.__MUI_DEFAULT_THEME__ = getDefaultTheme(); // Link a style sheet with a component.
 // It does not modify the component passed to it;
 // instead, it returns a new component, with a `classes` property.
 
-
-var withStyles = function withStyles(stylesOrCreator) {
+var withStylesOld = function withStylesOld(stylesOrCreator) {
   var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
   return function (Component) {
+    var _extends2;
+
     var _options$withTheme = options.withTheme,
         withTheme = _options$withTheme === void 0 ? false : _options$withTheme,
         _options$flip = options.flip,
@@ -2153,10 +2287,10 @@ var withStyles = function withStyles(stylesOrCreator) {
         name = options.name,
         styleSheetOptions = (0, _objectWithoutProperties2.default)(options, ["withTheme", "flip", "name"]);
     var stylesCreator = (0, _getStylesCreator.default)(stylesOrCreator);
-    var listenToTheme = stylesCreator.themingEnabled || withTheme || typeof name === 'string';
+    var listenToTheme = stylesCreator.themingEnabled || typeof name === 'string' || withTheme;
     indexCounter += 1;
     stylesCreator.options.index = indexCounter;
-     true ? (0, _warning.default)(indexCounter < 0, ['Material-UI: you might have a memory leak.', 'The indexCounter is not supposed to grow that much.'].join(' ')) : void 0;
+     true ? (0, _warning.default)(indexCounter < 0, ['Material-UI: you might have a memory leak.', 'The indexCounter is not supposed to grow that much.'].join('\n')) : void 0;
 
     var WithStyles =
     /*#__PURE__*/
@@ -2168,15 +2302,9 @@ var withStyles = function withStyles(stylesOrCreator) {
 
         (0, _classCallCheck2.default)(this, WithStyles);
         _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(WithStyles).call(this, props, context));
-        _this.disableStylesGeneration = false;
-        _this.jss = null;
-        _this.sheetOptions = null;
+        _this.jss = context[_reactJssContext.default.jss] || jss;
         _this.sheetsManager = sheetsManager;
-        _this.stylesCreatorSaved = null;
-        _this.theme = null;
         _this.unsubscribeId = null;
-        _this.state = {};
-        _this.jss = context[ns.jss] || jss;
         var muiThemeProviderOptions = context.muiThemeProviderOptions;
 
         if (muiThemeProviderOptions) {
@@ -2184,6 +2312,7 @@ var withStyles = function withStyles(stylesOrCreator) {
             _this.sheetsManager = muiThemeProviderOptions.sheetsManager;
           }
 
+          _this.sheetsCache = muiThemeProviderOptions.sheetsCache;
           _this.disableStylesGeneration = muiThemeProviderOptions.disableStylesGeneration;
         } // Attach the stylesCreator to the instance of the component as in the context
         // of react-hot-loader the hooks can be executed in a different closure context:
@@ -2191,9 +2320,9 @@ var withStyles = function withStyles(stylesOrCreator) {
 
 
         _this.stylesCreatorSaved = stylesCreator;
-        _this.sheetOptions = (0, _extends2.default)({
+        _this.sheetOptions = (0, _extends3.default)({
           generateClassName: generateClassName
-        }, context[ns.sheetOptions]); // We use || as the function call is lazy evaluated.
+        }, context[_reactJssContext.default.sheetOptions]); // We use || as the function call is lazy evaluated.
 
         _this.theme = listenToTheme ? _themeListener.default.initial(context) || getDefaultTheme() : noopTheme;
 
@@ -2257,18 +2386,19 @@ var withStyles = function withStyles(stylesOrCreator) {
       }, {
         key: "getClasses",
         value: function getClasses() {
-          // Tracks if either the rendered classes or classes prop has changed,
+          if (this.disableStylesGeneration) {
+            return this.props.classes || {};
+          } // Tracks if either the rendered classes or classes prop has changed,
           // requiring the generation of a new finalized classes object.
+
+
           var generate = false;
 
-          if (!this.disableStylesGeneration) {
-            var sheetManager = this.sheetsManager.get(this.stylesCreatorSaved);
-            var sheetsManagerTheme = sheetManager.get(this.theme);
+          var sheetManager = _multiKeyStore.default.get(this.sheetsManager, this.stylesCreatorSaved, this.theme);
 
-            if (sheetsManagerTheme.sheet.classes !== this.cacheClasses.lastJSS) {
-              this.cacheClasses.lastJSS = sheetsManagerTheme.sheet.classes;
-              generate = true;
-            }
+          if (sheetManager.sheet.classes !== this.cacheClasses.lastJSS) {
+            this.cacheClasses.lastJSS = sheetManager.sheet.classes;
+            generate = true;
           }
 
           if (this.props.classes !== this.cacheClasses.lastProp) {
@@ -2280,8 +2410,7 @@ var withStyles = function withStyles(stylesOrCreator) {
             this.cacheClasses.value = (0, _mergeClasses.default)({
               baseClasses: this.cacheClasses.lastJSS,
               newClasses: this.props.classes,
-              Component: Component,
-              noBase: this.disableStylesGeneration
+              Component: Component
             });
           }
 
@@ -2295,55 +2424,65 @@ var withStyles = function withStyles(stylesOrCreator) {
           }
 
           var stylesCreatorSaved = this.stylesCreatorSaved;
-          var sheetManager = this.sheetsManager.get(stylesCreatorSaved);
+
+          var sheetManager = _multiKeyStore.default.get(this.sheetsManager, stylesCreatorSaved, theme);
 
           if (!sheetManager) {
-            sheetManager = new Map();
-            this.sheetsManager.set(stylesCreatorSaved, sheetManager);
-          }
-
-          var sheetManagerTheme = sheetManager.get(theme);
-
-          if (!sheetManagerTheme) {
-            sheetManagerTheme = {
+            sheetManager = {
               refs: 0,
               sheet: null
             };
-            sheetManager.set(theme, sheetManagerTheme);
+
+            _multiKeyStore.default.set(this.sheetsManager, stylesCreatorSaved, theme, sheetManager);
           }
 
-          if (sheetManagerTheme.refs === 0) {
-            var styles = stylesCreatorSaved.create(theme, name);
-            var meta = name;
+          if (sheetManager.refs === 0) {
+            var sheet;
 
-            if ("development" !== 'production' && !meta) {
-              // Use customized getDisplayName to support IE11 in development
-              // Save some bytes by not importing this in production
-              // eslint-disable-next-line global-require
-              var getDisplayName = __webpack_require__("./node_modules/@material-ui/core/utils/getDisplayName.js").default;
-
-              meta = getDisplayName(Component);
-               true ? (0, _warning.default)(typeof meta === 'string', ['Material-UI: the component displayName is invalid. It needs to be a string.', "Please fix the following component: ".concat(Component, ".")].join('\n')) : void 0;
+            if (this.sheetsCache) {
+              sheet = _multiKeyStore.default.get(this.sheetsCache, stylesCreatorSaved, theme);
             }
 
-            var sheet = this.jss.createStyleSheet(styles, (0, _extends2.default)({
-              meta: meta,
-              classNamePrefix: meta,
-              flip: typeof flip === 'boolean' ? flip : theme.direction === 'rtl',
-              link: false
-            }, this.sheetOptions, stylesCreatorSaved.options, {
-              name: name
-            }, styleSheetOptions));
-            sheetManagerTheme.sheet = sheet;
-            sheet.attach();
-            var sheetsRegistry = this.context[ns.sheetsRegistry];
+            if (!sheet) {
+              sheet = this.createSheet(theme);
+              sheet.attach();
+
+              if (this.sheetsCache) {
+                _multiKeyStore.default.set(this.sheetsCache, stylesCreatorSaved, theme, sheet);
+              }
+            }
+
+            sheetManager.sheet = sheet;
+            var sheetsRegistry = this.context[_reactJssContext.default.sheetsRegistry];
 
             if (sheetsRegistry) {
               sheetsRegistry.add(sheet);
             }
           }
 
-          sheetManagerTheme.refs += 1;
+          sheetManager.refs += 1;
+        }
+      }, {
+        key: "createSheet",
+        value: function createSheet(theme) {
+          var styles = this.stylesCreatorSaved.create(theme, name);
+          var meta = name;
+
+          if ("development" !== 'production' && !meta) {
+            // Provide a better DX outside production.
+            meta = (0, _utils.getDisplayName)(Component);
+             true ? (0, _warning.default)(typeof meta === 'string', ['Material-UI: the component displayName is invalid. It needs to be a string.', "Please fix the following component: ".concat(Component, ".")].join('\n')) : void 0;
+          }
+
+          var sheet = this.jss.createStyleSheet(styles, (0, _extends3.default)({
+            meta: meta,
+            classNamePrefix: meta,
+            flip: typeof flip === 'boolean' ? flip : theme.direction === 'rtl',
+            link: false
+          }, this.sheetOptions, this.stylesCreatorSaved.options, {
+            name: name || Component.displayName
+          }, styleSheetOptions));
+          return sheet;
         }
       }, {
         key: "detach",
@@ -2352,18 +2491,18 @@ var withStyles = function withStyles(stylesOrCreator) {
             return;
           }
 
-          var stylesCreatorSaved = this.stylesCreatorSaved;
-          var sheetManager = this.sheetsManager.get(stylesCreatorSaved);
-          var sheetManagerTheme = sheetManager.get(theme);
-          sheetManagerTheme.refs -= 1;
+          var sheetManager = _multiKeyStore.default.get(this.sheetsManager, this.stylesCreatorSaved, theme);
 
-          if (sheetManagerTheme.refs === 0) {
-            sheetManager.delete(theme);
-            this.jss.removeStyleSheet(sheetManagerTheme.sheet);
-            var sheetsRegistry = this.context[ns.sheetsRegistry];
+          sheetManager.refs -= 1;
+
+          if (sheetManager.refs === 0) {
+            _multiKeyStore.default.delete(this.sheetsManager, this.stylesCreatorSaved, theme);
+
+            this.jss.removeStyleSheet(sheetManager.sheet);
+            var sheetsRegistry = this.context[_reactJssContext.default.sheetsRegistry];
 
             if (sheetsRegistry) {
-              sheetsRegistry.remove(sheetManagerTheme.sheet);
+              sheetsRegistry.remove(sheetManager.sheet);
             }
           }
         }
@@ -2385,7 +2524,7 @@ var withStyles = function withStyles(stylesOrCreator) {
             more.theme = this.theme;
           }
 
-          return _react.default.createElement(Component, (0, _extends2.default)({}, more, {
+          return _react.default.createElement(Component, (0, _extends3.default)({}, more, {
             classes: this.getClasses(),
             ref: innerRef
           }));
@@ -2405,12 +2544,12 @@ var withStyles = function withStyles(stylesOrCreator) {
        */
       innerRef: _propTypes.default.oneOfType([_propTypes.default.func, _propTypes.default.object])
     } : {};
-    WithStyles.contextTypes = (0, _extends2.default)({
+    WithStyles.contextTypes = (0, _extends3.default)((_extends2 = {
       muiThemeProviderOptions: _propTypes.default.object
-    }, _contextTypes.default, listenToTheme ? _themeListener.default.contextTypes : {});
+    }, (0, _defineProperty2.default)(_extends2, _reactJssContext.default.jss, _propTypes.default.object), (0, _defineProperty2.default)(_extends2, _reactJssContext.default.sheetOptions, _propTypes.default.object), (0, _defineProperty2.default)(_extends2, _reactJssContext.default.sheetsRegistry, _propTypes.default.object), _extends2), listenToTheme ? _themeListener.default.contextTypes : {});
 
     if (true) {
-      WithStyles.displayName = (0, _wrapDisplayName.default)(Component, 'WithStyles');
+      WithStyles.displayName = "WithStyles(".concat((0, _utils.getDisplayName)(Component), ")");
     }
 
     (0, _hoistNonReactStatics.default)(WithStyles, Component);
@@ -2424,8 +2563,18 @@ var withStyles = function withStyles(stylesOrCreator) {
     return WithStyles;
   };
 };
+/* istanbul ignore if */
 
-var _default = withStyles;
+
+if (!_utils.ponyfillGlobal.__MUI_STYLES__) {
+  _utils.ponyfillGlobal.__MUI_STYLES__ = {};
+}
+
+if (!_utils.ponyfillGlobal.__MUI_STYLES__.withStyles) {
+  _utils.ponyfillGlobal.__MUI_STYLES__.withStyles = withStylesOld;
+}
+
+var _default = _utils.ponyfillGlobal.__MUI_STYLES__.withStyles;
 exports.default = _default;
 
 /***/ }),
@@ -2453,7 +2602,7 @@ var _createClass2 = _interopRequireDefault(__webpack_require__("./node_modules/n
 
 var _possibleConstructorReturn2 = _interopRequireDefault(__webpack_require__("./node_modules/next/node_modules/@babel/runtime/helpers/possibleConstructorReturn.js"));
 
-var _getPrototypeOf2 = _interopRequireDefault(__webpack_require__("./node_modules/@babel/runtime/helpers/getPrototypeOf.js"));
+var _getPrototypeOf2 = _interopRequireDefault(__webpack_require__("./node_modules/@material-ui/core/node_modules/@babel/runtime/helpers/getPrototypeOf.js"));
 
 var _inherits2 = _interopRequireDefault(__webpack_require__("./node_modules/next/node_modules/@babel/runtime/helpers/inherits.js"));
 
@@ -2463,12 +2612,13 @@ var _propTypes = _interopRequireDefault(__webpack_require__("./node_modules/next
 
 var _hoistNonReactStatics = _interopRequireDefault(__webpack_require__("./node_modules/next/node_modules/hoist-non-react-statics/index.js"));
 
-var _wrapDisplayName = _interopRequireDefault(__webpack_require__("./node_modules/recompose/wrapDisplayName.js"));
+var _utils = __webpack_require__("./node_modules/@material-ui/utils/index.es.js");
 
 var _createMuiTheme = _interopRequireDefault(__webpack_require__("./node_modules/@material-ui/core/styles/createMuiTheme.js"));
 
 var _themeListener = _interopRequireDefault(__webpack_require__("./node_modules/@material-ui/core/styles/themeListener.js"));
 
+/* eslint-disable no-underscore-dangle */
 var defaultTheme;
 
 function getDefaultTheme() {
@@ -2481,7 +2631,7 @@ function getDefaultTheme() {
 } // Provide the theme object as a property to the input component.
 
 
-var withTheme = function withTheme() {
+var withThemeOld = function withThemeOld() {
   return function (Component) {
     var WithTheme =
     /*#__PURE__*/
@@ -2493,8 +2643,6 @@ var withTheme = function withTheme() {
 
         (0, _classCallCheck2.default)(this, WithTheme);
         _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(WithTheme).call(this));
-        _this.unsubscribeId = null;
-        _this.state = {};
         _this.state = {
           // We use || as the function call is lazy evaluated.
           theme: _themeListener.default.initial(context) || getDefaultTheme()
@@ -2544,7 +2692,7 @@ var withTheme = function withTheme() {
     WithTheme.contextTypes = _themeListener.default.contextTypes;
 
     if (true) {
-      WithTheme.displayName = (0, _wrapDisplayName.default)(Component, 'WithTheme');
+      WithTheme.displayName = "WithTheme(".concat((0, _utils.getDisplayName)(Component), ")");
     }
 
     (0, _hoistNonReactStatics.default)(WithTheme, Component);
@@ -2557,8 +2705,18 @@ var withTheme = function withTheme() {
     return WithTheme;
   };
 };
+/* istanbul ignore if */
 
-var _default = withTheme;
+
+if (!_utils.ponyfillGlobal.__MUI_STYLES__) {
+  _utils.ponyfillGlobal.__MUI_STYLES__ = {};
+}
+
+if (!_utils.ponyfillGlobal.__MUI_STYLES__.withTheme) {
+  _utils.ponyfillGlobal.__MUI_STYLES__.withTheme = withThemeOld;
+}
+
+var _default = _utils.ponyfillGlobal.__MUI_STYLES__.withTheme;
 exports.default = _default;
 
 /***/ }),
@@ -2588,7 +2746,7 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ "./node_modules/@material-ui/core/utils/exactProp.js":
+/***/ "./node_modules/@material-ui/utils/exactProp.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2638,7 +2796,7 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ "./node_modules/@material-ui/core/utils/getDisplayName.js":
+/***/ "./node_modules/@material-ui/utils/getDisplayName.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2649,8 +2807,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.getFunctionName = getFunctionName;
 exports.default = void 0;
-// Fork of recompose/getDisplayName with added IE11 support
-// Simplified polyfill for IE11 support
+// Fork of recompose/getDisplayName with added IE 11 support
+// Simplified polyfill for IE 11 support
 // https://github.com/JamesMGreene/Function.name/blob/58b314d4a983110c3682f1228f845d39ccca1817/Function.name.js#L3
 var fnNameMatchRegex = /^\s*function(?:\s|\s*\/\*.*\*\/\s*)+([^(\s/]*)\s*/;
 
@@ -2673,6 +2831,51 @@ function getDisplayName(Component) {
 }
 
 var _default = getDisplayName;
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/utils/index.es.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__exactProp__ = __webpack_require__("./node_modules/@material-ui/utils/exactProp.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__exactProp___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__exactProp__);
+/* harmony reexport (default from non-hamory) */ __webpack_require__.d(__webpack_exports__, "exactProp", function() { return __WEBPACK_IMPORTED_MODULE_0__exactProp___default.a; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getDisplayName__ = __webpack_require__("./node_modules/@material-ui/utils/getDisplayName.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getDisplayName___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__getDisplayName__);
+/* harmony reexport (default from non-hamory) */ __webpack_require__.d(__webpack_exports__, "getDisplayName", function() { return __WEBPACK_IMPORTED_MODULE_1__getDisplayName___default.a; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ponyfillGlobal__ = __webpack_require__("./node_modules/@material-ui/utils/ponyfillGlobal.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ponyfillGlobal___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__ponyfillGlobal__);
+/* harmony reexport (default from non-hamory) */ __webpack_require__.d(__webpack_exports__, "ponyfillGlobal", function() { return __WEBPACK_IMPORTED_MODULE_2__ponyfillGlobal___default.a; });
+/** @license Material-UI v3.0.0-alpha.0
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/utils/ponyfillGlobal.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+/* eslint-disable */
+// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
+var _default = typeof window != 'undefined' && window.Math == Math ? window : typeof self != 'undefined' && self.Math == Math ? self : Function('return this')();
+
 exports.default = _default;
 
 /***/ }),
@@ -8184,54 +8387,6 @@ exports['default'] = {
     toString: _propTypes.func.isRequired
   })
 };
-
-/***/ }),
-
-/***/ "./node_modules/recompose/getDisplayName.js":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-exports.default = void 0;
-
-var getDisplayName = function getDisplayName(Component) {
-  if (typeof Component === 'string') {
-    return Component;
-  }
-
-  if (!Component) {
-    return undefined;
-  }
-
-  return Component.displayName || Component.name || 'Component';
-};
-
-var _default = getDisplayName;
-exports.default = _default;
-
-/***/ }),
-
-/***/ "./node_modules/recompose/wrapDisplayName.js":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__("./node_modules/next/node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-exports.__esModule = true;
-exports.default = void 0;
-
-var _getDisplayName = _interopRequireDefault(__webpack_require__("./node_modules/recompose/getDisplayName.js"));
-
-var wrapDisplayName = function wrapDisplayName(BaseComponent, hocName) {
-  return hocName + "(" + (0, _getDisplayName.default)(BaseComponent) + ")";
-};
-
-var _default = wrapDisplayName;
-exports.default = _default;
 
 /***/ }),
 
