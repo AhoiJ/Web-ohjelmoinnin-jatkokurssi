@@ -7,12 +7,15 @@ import Button from '@material-ui/core/Button';
 const Navbar: React.SFC<{}> = () => (
   <AppBar position="static">
     <Toolbar>
-      <Link href="/"><Button color="inherit">Home</Button></Link>
-      <Link href="/clock"><Button color="inherit">Clock</Button></Link>
-      <Link href="/countries_local"><Button color="inherit">Local Countries</Button></Link>
-      <Link href="/countries_remote"><Button color="inherit">Remote Countries</Button></Link>
+      <Link href="/"><Button color="inherit">Lainausjärjestelmä</Button></Link>
+
     </Toolbar>
   </AppBar>
 )
 
 export default Navbar;
+
+
+/* <Link href="/clock"><Button color="inherit">Clock</Button></Link>
+  <Link href="/countries_local"><Button color="inherit">Local Countries</Button></Link>
+  <Link href="/countries_remote"><Button color="inherit">Remote Countries</Button></Link>*/
