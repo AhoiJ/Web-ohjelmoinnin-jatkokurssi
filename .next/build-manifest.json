@@ -11,10 +11,8 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/equipments": [
+    "/index": [
       "static/runtime/webpack.js",
-      "static/css/styles.chunk.css",
-      "static/chunks/styles.js",
       "static/runtime/main.js"
     ],
     "/users": [
@@ -23,8 +21,10 @@
       "static/chunks/styles.js",
       "static/runtime/main.js"
     ],
-    "/index": [
+    "/equipments": [
       "static/runtime/webpack.js",
+      "static/css/styles.chunk.css",
+      "static/chunks/styles.js",
       "static/runtime/main.js"
     ],
     "/loans": [

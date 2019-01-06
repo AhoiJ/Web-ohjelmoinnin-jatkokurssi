@@ -171,7 +171,6 @@ PersistentDrawerLeft.propTypes = {
 export default withStyles(styles, { withTheme: true })(PersistentDrawerLeft);
 
 
-
 /*
 export default withStyles(styles)(PermanentDrawerLeft);
 */

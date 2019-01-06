@@ -12,7 +12,19 @@ const Home: React.SFC<{prop1: string, prop2: number}> = () => {
   return (
     <div>
     <div> <PersistentDrawerLeft /></div>
-
+    <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '25vh'}}>
+    <h1> Tervetuloa lainausjärjestelmään </h1>
+    </div>
+    <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '1vh'}}>
+    <body>
+    Vasemmasta yläkulmasta löydät valikon, jonka avulla navigoit sivua.
+    </body>
+    </div>
+    <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '5vh'}}>
+    <body>
+    Editorial nootti: syystä x y ja z kun ajaa yarn dev, navigointinäppäimet eivät toimi ennenkuin on kerran manuaalisesti navigoinut johonkin päätepisteeseen
+    </body>
+    </div>
     <br />
     <br />
     <Grid container={true}>
