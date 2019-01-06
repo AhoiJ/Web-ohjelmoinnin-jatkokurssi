@@ -138,6 +138,8 @@ class PersistentDrawerLeft extends React.Component {
           <Divider />
           <List>
 
+          <Link href="/"><Button color="inherit">Koti</Button></Link>
+          <br/>
           <Link href="/users"><Button color="inherit">Käyttäjät</Button></Link>
           <br/>
           <Link href="/equipments"><Button color="inherit">Laitteet</Button></Link>
