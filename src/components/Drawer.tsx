@@ -138,14 +138,6 @@ class PersistentDrawerLeft extends React.Component {
           <Divider />
           <List>
 
-          <Link href="/"><Button color="inherit">Home</Button></Link>
-          <br/>
-          <Link href="/clock"><Button color="inherit">Clock</Button></Link>
-          <br/>
-          <Link href="/countries_local"><Button color="inherit">Local Countries</Button></Link>
-          <br/>
-          <Link href="/countries_remote"><Button color="inherit">Remote Countries</Button></Link>
-          <br/>
           <Link href="/users"><Button color="inherit">Käyttäjät</Button></Link>
           <br/>
           <Link href="/equipments"><Button color="inherit">Laitteet</Button></Link>
@@ -232,4 +224,16 @@ anchor="left"
 PermanentDrawerLeft.PropTypes = {
   classes: PropTypes.object.isRequired,
 };
+*/
+
+
+/*
+          <Link href="/"><Button color="inherit">Home</Button></Link>
+          <br/>
+          <Link href="/clock"><Button color="inherit">Clock</Button></Link>
+          <br/>
+          <Link href="/countries_local"><Button color="inherit">Local Countries</Button></Link>
+          <br/>
+          <Link href="/countries_remote"><Button color="inherit">Remote Countries</Button></Link>
+          <br/>
 */

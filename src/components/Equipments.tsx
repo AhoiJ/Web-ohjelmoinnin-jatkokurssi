@@ -28,7 +28,7 @@ render() {
  const { equipments } = this.state;
  return (
      <Paper>
-       <h1>Käyttäjät</h1>
+       <h1>Laitteet</h1>
        <Table>
          <TableHead>
            <TableRow>
