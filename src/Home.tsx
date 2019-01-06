@@ -12,12 +12,6 @@ const Home: React.SFC<{prop1: string, prop2: number}> = () => {
   return (
     <div>
     <div> <PersistentDrawerLeft /></div>
-    
-    <div>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </div>
 
     <br />
     <br />
@@ -32,3 +26,11 @@ const Home: React.SFC<{prop1: string, prop2: number}> = () => {
 }
 
 export default Home;
+
+/*
+    <div>
+      <Link href="/about">
+        <a>About</a>
+      </Link>
+    </div>
+*/
