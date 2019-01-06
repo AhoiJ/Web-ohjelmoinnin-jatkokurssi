@@ -1,1 +1,41 @@
-{"pages":{},"css":[],"main.js":["static/commons/main.js"],"bundles/pages/_app.js":["bundles/pages/_app.js"],"bundles/pages/_document.js":["bundles/pages/_document.js"],"bundles/pages/_error.js":["bundles/pages/_error.js"],"manifest.js":["static/commons/manifest.js"],"bundles/pages/users.js":["bundles/pages/users.js"]}
+{
+  "devFiles": [
+    "static/development/dll/dll_3eb06486a5080ef1251b.js"
+  ],
+  "pages": {
+    "/_app": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/_error": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/index": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/users": [
+      "static/runtime/webpack.js",
+      "static/css/styles.chunk.css",
+      "static/chunks/styles.js",
+      "static/runtime/main.js"
+    ],
+    "/equipments": [
+      "static/runtime/webpack.js",
+      "static/css/styles.chunk.css",
+      "static/chunks/styles.js",
+      "static/runtime/main.js"
+    ],
+    "/loans": [
+      "static/runtime/webpack.js",
+      "static/css/styles.chunk.css",
+      "static/chunks/styles.js",
+      "static/runtime/main.js"
+    ],
+    "/": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ]
+  }
+}

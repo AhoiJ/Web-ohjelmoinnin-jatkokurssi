@@ -7,6 +7,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import axios from 'axios'
+import ReactTable from "react-table";
 import Equipment_api from './Equipment_api';
 
 class Equipment extends Component{
