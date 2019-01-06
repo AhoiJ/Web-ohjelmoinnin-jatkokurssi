@@ -7,32 +7,32 @@ import matchSorter from 'match-sorter'
 import ReactTable from "react-table";
 import "react-table/react-table.css";
 
-class App extends React.Component {
+class EquipmentSearch extends React.Component {
   constructor() {
     super();
-    this.state ={users:[]}
+    this.state ={equipments:[]}
   }
 
   async componentDidMount() {
-    const response = await fetch('http://localhost:9000/api/v1/users')
+    const response = await fetch('http://localhost:9000/api/v1/equipments')
     const data = await response.json();
     console.log('data is here:', data);
-    this.setState({ users: data });
+    this.setState({ equipments: data });
   }
 
 
   render() {
-    const { users } = this.state;
+    const { equipments } = this.state;
     return (
       <div>
         <ReactTable
-          data={users}
+          data={equipments}
           filterable
           defaultFilterMethod={(filter, row) =>
             String(row[filter.id]) === filter.value}
           columns={[
             {
-              Header: "Käyttäjät",
+              Header: "Laitteet",
               columns: [
                 {
                   Header: "Id",
@@ -42,19 +42,27 @@ class App extends React.Component {
                 filterAll: true
                 },
                 {
-                  Header: "Etunimi",
-                  id: "fname",
-                  accessor: d => d.fname,
+                  Header: "Kategoria Id",
+                  id: "kategoria_id",
+                  accessor: d => d.kategoria_id,
                   filterMethod: (filter, rows) =>
-                    matchSorter(rows, filter.value, { keys: ["fname"] }),
+                    matchSorter(rows, filter.value, { keys: ["kategoria_id"] }),
                   filterAll: true
                 },
                 {
-                  Header: "Sukunimi",
-                  id: "lname",
-                  accessor: d => d.lname,
+                  Header: "Sarjanumero",
+                  id: "sarjanumero",
+                  accessor: d => d.sarjanumero,
                   filterMethod: (filter, rows) =>
-                    matchSorter(rows, filter.value, {keys: ["lname"] }),
+                    matchSorter(rows, filter.value, {keys: ["sarjanumero"] }),
+                  filterAll: true
+                },
+                {
+                  Header: "Kunto",
+                  id: "kunto",
+                  accessor: d => d.kunto,
+                  filterMethod: (filter, rows) =>
+                    matchSorter(rows, filter.value, {keys: ["kunto"] }),
                   filterAll: true
                 }
               ]
@@ -67,5 +75,5 @@ class App extends React.Component {
   }
 };
 
-export default App;
+export default EquipmentSearch;
 //render(<App />, document.getElementById("root"));

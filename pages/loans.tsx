@@ -4,6 +4,7 @@ import Button from '@material-ui/core/Button'
 import Grid from '@material-ui/core/Grid';
 import Navbar from '../src/components/Navbar'
 import Loan from '../src/components/Loans'
+import LoanSearch from '../src/components/LoansWithSearch'
 import PersistentDrawerLeft from '../src/components/Drawer'
 
 const Home: React.SFC<{prop1: string, prop2: number}> = () => {
@@ -17,7 +18,7 @@ const Home: React.SFC<{prop1: string, prop2: number}> = () => {
       <Grid item={true}>
       </Grid>
       <Grid item={true}>
-        <Loan />
+        <LoanSearch />
       </Grid>
     </Grid>
   </div>
